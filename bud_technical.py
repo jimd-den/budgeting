@@ -7,7 +7,7 @@ connection_obj = sqlite3.connect("budget_ledger.db")
 cursor_obj = connection_obj.cursor()
 
 def create_database():
-
+    
 
     cursor_obj.execute("DROP TABLE IF EXISTS balance") ##don't need
 
@@ -18,9 +18,8 @@ def create_database():
                 transact_reas VARCHAR(255));
             """
     cursor_obj.execute(table)
+    print("DATABASE CREATED DAMN!!!!!")
 
-    connection_obj.close()
-    print("db initialized")
 
 def insert_transaction(transaction_tuple):
     sql = '''INSERT INTO balance(transact_amt,transact_date,transact_reas)

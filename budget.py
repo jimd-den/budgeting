@@ -9,11 +9,8 @@ add_transaction:
 """
 
 import transaction_manager
-import random
 import bud_technical
 import sys
-from datetime import datetime, date, time, timezone
-import time
 
 ## our main object is the transaction. Every Bill is a transaction, income is a transaction.
 
@@ -37,4 +34,4 @@ if __name__ == "__main__":
             case "--show_snapshot":
                transaction_manager.show_snapshot()
             case "--create_db":
-                bud_technical.create_database()
+                transaction_manager.db_init()
