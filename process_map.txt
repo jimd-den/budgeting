@@ -1,0 +1,23 @@
+start -> budget_snapshot
+
+start --add_transaction -> question_form -> save to db or csv? -> end
+
+start --list_transaction -> pull_and_list -> end
+
+start --remove_transaction -> recuring or no [yes] -> list recuring transactions
+					     [no] -> list_first_ten_transactions
+	..first_ten_transactions -> more than ten [yes] -> space more option to end							[no] -> enter_transaction_id
+								-> remove_by_id -> end
+
+start --forecast 30 days -> snapshot: bal + list of bills between dates
+
+
+### DISPLAY ### [Budget_Snapshot]
+Balance = sum_balance(sum of all transactions up to date
+
+forecast
+_______
+7 Days: raw_sum (bill before seven day list)
+14 days: raw_sum (bills before 14 day list)
+30 days: raw_sum (bills before 30 day list)
+
