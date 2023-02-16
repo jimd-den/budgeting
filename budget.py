@@ -35,3 +35,5 @@ if __name__ == "__main__":
                transaction_manager.show_snapshot()
             case "--create_db":
                 transaction_manager.db_init()
+            case "--get_all_transactions_test":
+                transaction_manager.list_transaction()

@@ -28,7 +28,13 @@ def insert_transaction(transaction_tuple):
     connection_obj.commit()
     return cursor_obj.lastrowid
 
+def get_items_from_db():
+    sql = "SELECT * FROM balance"
+    cursor_obj.execute(sql)
 
+    rows = cursor_obj.fetchall()
+
+    return rows
 
 
 def numeric_input(msg, error_msg):
