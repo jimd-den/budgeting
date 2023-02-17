@@ -41,7 +41,6 @@ def list_transaction():
     transaction_raw = bud_technical.get_items_from_db()
     for i in transaction_raw:
         print("Amount: ", i[1], "Date: ", i[2], "Reason: ", i[3])
-        print("--------------------------------------------------")
 
 def remove_transaction():
     list_transaction()
