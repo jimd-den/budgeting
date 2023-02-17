@@ -42,6 +42,6 @@ if __name__ == "__main__":
     parser.add_argument('-r', '--remove')
     parser.add_argument('-s', '--show')
     args = parser.parse_args()
-    if args.add != 0:
-        print(args.add)
+    if args.add != None:
+        print(args.add, "COWABANGA")
     print("##DEBUG##\n", args, "\n##DEBUG##")
