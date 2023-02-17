@@ -19,10 +19,12 @@ def transaction_parse(string):
             amt_raw = int(tr_raw[0])
         except:
             print(incorrect_string_format)
+            raise TypeError
         try:
             date_raw = int(tr_raw[1])
         except:
             print(incorrect_string_format)
+            raise TypeError
         reason_raw = tr_raw[2]
         return Transaction(amt_raw, date_raw, reason_raw)
 
