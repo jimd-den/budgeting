@@ -1,5 +1,6 @@
 import sys
 import argparse
+import tr_manager
 
 ## Main Object
 class Transaction:
@@ -32,7 +33,7 @@ def transaction_parse(string):
             reason_raw = tr_raw[2]
             buff_tr = Transaction(amt_raw, date_raw, reason_raw)
             return buff_tr
-
+## 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
                         prog = "dbt_clt",
@@ -41,7 +42,10 @@ if __name__ == "__main__":
     parser.add_argument('-a', '--add', type=transaction_parse)
     parser.add_argument('-r', '--remove')
     parser.add_argument('-s', '--show')
+    parser.add_argument('-c', '--create_db')
     args = parser.parse_args()
     if args.add != None:
-        print(args.add, "COWABANGA")
+        tr_manager.add_transaction(args.add)
+    if args.create_db != None:
+        tr_manager.create_db_table()
     print("##DEBUG##\n", args, "\n##DEBUG##")
