@@ -42,10 +42,10 @@ if __name__ == "__main__":
     parser.add_argument('-a', '--add', type=transaction_parse)
     parser.add_argument('-r', '--remove')
     parser.add_argument('-s', '--show')
-    parser.add_argument('-c', '--create_db')
+    parser.add_argument('-c', '--create_db', action='store_true')
     args = parser.parse_args()
     if args.add != None:
         tr_manager.add_transaction(args.add)
-    if args.create_db != None:
+    if args.create_db == True:
         tr_manager.create_db_table()
     print("##DEBUG##\n", args, "\n##DEBUG##")
